@@ -15,10 +15,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   // Learn more about auto-binding templates at http://goo.gl/Dx1u2g
   var app = document.querySelector('#app');
 
+  app.firebaseURL = 'https://polymer-todo.firebaseio.com';
+
   // Let the user know that offline caching has worked and their
   // app is available offline
   app.displayInstalledToast = function() {
     document.querySelector('#caching-complete').show();
+  };
+
+  app.signOut = function() {
+    this.$.auth.signOut();
   };
 
 })(document);

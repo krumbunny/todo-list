@@ -70,6 +70,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         padding: 0 16px;
       }
 
+      #mainToolbar {
+        color: #FFF;
+      }
+
       #mainToolbar .middle-container {
         height: 100%;
         margin-left: 48px;
@@ -206,6 +210,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             this.splice('todos', i--, 1);
           }
         }
+      },
+
+      signOut: function() {
+        this.fire('sign-out');
       },
 
       // Close drawer after menu item is selected if drawerPanel is narrow
